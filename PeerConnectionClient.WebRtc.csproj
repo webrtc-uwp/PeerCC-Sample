@@ -4,27 +4,27 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{99103751-25B2-420E-9297-17E0259538BC}</ProjectGuid>
+    <ProjectGuid>{A2EA7350-EE59-42C5-9323-C942B058B217}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PeerConnectionClient</RootNamespace>
-    <AssemblyName>PeerConnectionClientORTC</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <AssemblyName>PeerConnectionClient.WebRtc</AssemblyName>
+    <DefaultLanguage>en</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>PeerConnectionClient.Ortc_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>PeerConnectionClient.WebRtc_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxBundlePlatforms>$(Platform)</AppxBundlePlatforms>
-    <PackageCertificateThumbprint>3396B71AF5425FEA924E1C840441B784248C9C25</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>BB8A06CAEDBC89DD4FD493DAE421659FB98BEEB9</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Output\PeerCC.Client\Ortc\bin\$(Platform)\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>..\Output\PeerCC.Client\Ortc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;ORTCLIB</DefineConstants>
+    <OutputPath>..\Output\PeerCC.Client\WebRtc\bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\Output\PeerCC.Client\WebRtc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -33,9 +33,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>..\Output\PeerCC.Client\Ortc\bin\$(Platform)\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>..\Output\PeerCC.Client\Ortc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;ORTCLIB</DefineConstants>
+    <OutputPath>..\Output\PeerCC.Client\WebRtc\bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\Output\PeerCC.Client\WebRtc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -47,9 +47,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Output\PeerCC.Client\Ortc\bin\$(Platform)\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>..\Output\PeerCC.Client\Ortc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;ORTCLIB</DefineConstants>
+    <OutputPath>..\Output\PeerCC.Client\WebRtc\bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\Output\PeerCC.Client\WebRtc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>ARM</PlatformTarget>
@@ -58,9 +58,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
-    <OutputPath>..\Output\PeerCC.Client\Ortc\bin\$(Platform)\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>..\Output\PeerCC.Client\Ortc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;ORTCLIB</DefineConstants>
+    <OutputPath>..\Output\PeerCC.Client\WebRtc\bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\Output\PeerCC.Client\WebRtc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -72,9 +72,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Output\PeerCC.Client\Ortc\bin\$(Platform)\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>..\Output\PeerCC.Client\Ortc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;ORTCLIB</DefineConstants>
+    <OutputPath>..\Output\PeerCC.Client\WebRtc\bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\Output\PeerCC.Client\WebRtc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -83,9 +83,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\Output\PeerCC.Client\Ortc\bin\$(Platform)\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>..\Output\PeerCC.Client\Ortc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;ORTCLIB</DefineConstants>
+    <OutputPath>..\Output\PeerCC.Client\WebRtc\bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\Output\PeerCC.Client\WebRtc\obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -96,22 +96,16 @@
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Main\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\IceServer.cs" />
     <Compile Include="Model\Peer.cs" />
     <Compile Include="MVVM\BindableBase.cs" />
     <Compile Include="MVVM\DispatcherBindableBase.cs" />
-    <Compile Include="Ortc-Required\AutoLock.cs" />
-    <Compile Include="Ortc-Required\Helper.cs" />
-    <Compile Include="Ortc-Required\Media.cs" />
-    <Compile Include="Ortc-Required\MediaDevice.cs" />
-    <Compile Include="Ortc-Required\ORTCStatsManager.cs" />
-    <Compile Include="Ortc-Required\WebRTC.cs" />
     <Compile Include="Signalling\Conductor.cs" />
     <Compile Include="Signalling\Signalling.cs" />
     <Compile Include="Utilities\ActionCommand.cs" />
@@ -134,11 +128,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PeerConnectionClient.Ortc_TemporaryKey.pfx" />
-    <None Include="project.json" />
-    <AppxManifest Include="Package.Ortc.appxmanifest">
+    <AppxManifest Include="Package.WebRtc.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="PeerConnectionClient.WebRtc_TemporaryKey.pfx" />
+    <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
@@ -166,6 +160,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
     <Page Include="Main\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
