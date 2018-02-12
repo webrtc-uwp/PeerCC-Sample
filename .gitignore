@@ -3,3 +3,18 @@ project.lock.json
 # Visual Studio 2015 cache/options directory
 .vs/
 *.user
+/Build
+/obj
+
+/*.dll
+/*.pdb
+/*.winmd
+Unity/UnityVideoControl/Assets/Plugins/WSA/x86/*.dll
+Unity/UnityVideoControl/Assets/Plugins/WSA/x86/*.winmd
+Unity/UnityVideoControl/Assets/Plugins/WSA/x86/*.pdb
+Unity/UnityVideoControl/Assets/Plugins/WSA/x64/*.dll
+Unity/UnityVideoControl/Assets/Plugins/WSA/x64/*.winmd
+Unity/UnityVideoControl/Assets/Plugins/WSA/x64/*.pdb
+Unity/UnityVideoControl/Library
+Unity/UnityVideoControl/UnityPackageManager
+Unity/UnityVideoControl/UWP
