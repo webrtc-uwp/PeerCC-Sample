@@ -2,6 +2,7 @@ bin/
 obj/
 packages/
 Build/
+.vs/
 *.suo
 *.csproj.user
 project.lock.json
