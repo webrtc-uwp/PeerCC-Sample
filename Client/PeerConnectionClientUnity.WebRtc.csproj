@@ -382,11 +382,6 @@
   </_GenerateAppxManifestDependsOn>
   </PropertyGroup>
   <Target Name="BeforeResolveReferences" Condition="'$(BuildingProject)' == 'true'">
-    <Copy SourceFiles="$(ProjectDir)..\Output\PeerCC.CoreUnityXaml\WebRtc\bin\$(PlatformName)\$(ConfigurationName)\Org.WebRtc.dll" DestinationFiles="$(ProjectDir)Org.WebRtc.dll" />
-    <Copy SourceFiles="$(ProjectDir)..\Output\PeerCC.CoreUnityXaml\WebRtc\bin\$(PlatformName)\$(ConfigurationName)\Org.WebRtc.winmd" DestinationFiles="$(ProjectDir)Org.WebRtc.winmd" />
-    <Delete Files="$(ProjectDir)Org.WebRtc.pdb" Condition="Exists('$(ProjectDir)Org.WebRtc.pdb')" />
-    <Delete Files="$(ProjectDir)Org.WebRtc.dll.mdb" Condition="Exists('$(ProjectDir)Org.WebRtc.dll.mdb')" />
-    <Copy SourceFiles="$(OutDir)Org.WebRtc.pdb" DestinationFiles="$(ProjectDir)Org.WebRtc.pdb" Condition="Exists('$(OutDir)Org.WebRtc.pdb')" />
     <Copy SourceFiles="$(ProjectDir)Unity\UnityVideoControl\Assets\Plugins\WSA\$(PlatformShortName)\MediaEngineUWP.dll" DestinationFiles="$(ProjectDir)MediaEngineUWP.dll" />
     <Delete Files="$(ProjectDir)MediaEngineUWP.pdb" Condition="Exists('$(ProjectDir)MediaEngineUWP.pdb')" />
     <Delete Files="$(ProjectDir)MediaEngineUWP.dll.mdb" Condition="Exists('$(ProjectDir)MediaEngineUWP.dll.mdb')" />
@@ -396,6 +391,11 @@
     <Message Importance="high" Text="UnityWSAPlayerDir &quot;$(UnityWSAPlayerDir)&quot;." />
     <Message Importance="high" Text="UnityProjectDir &quot;$(UnityProjectDir)&quot;." />
     <Message Importance="high" Text="Copying unprocessed assemblies..." />
+    <Copy SourceFiles="$(ProjectDir)..\Output\PeerCC.ClientUnityXaml\WebRtc\bin\$(PlatformName)\$(ConfigurationName)\Org.WebRtc.dll" DestinationFiles="$(ProjectDir)Org.WebRtc.dll" />
+    <Copy SourceFiles="$(ProjectDir)..\Output\PeerCC.ClientUnityXaml\WebRtc\bin\$(PlatformName)\$(ConfigurationName)\Org.WebRtc.winmd" DestinationFiles="$(ProjectDir)Org.WebRtc.winmd" />
+    <Delete Files="$(ProjectDir)Org.WebRtc.pdb" Condition="Exists('$(ProjectDir)Org.WebRtc.pdb')" />
+    <Delete Files="$(ProjectDir)Org.WebRtc.dll.mdb" Condition="Exists('$(ProjectDir)Org.WebRtc.dll.mdb')" />
+    <Copy SourceFiles="$(OutDir)Org.WebRtc.pdb" DestinationFiles="$(ProjectDir)Org.WebRtc.pdb" Condition="Exists('$(OutDir)Org.WebRtc.pdb')" />
     <Copy SourceFiles="@(UnprocessedFileCommon)" DestinationFolder="$(ProjectDir)" />
     <Copy SourceFiles="..\Output\PeerCC.ClientUnityXaml.Assembly-CSharp\WebRtc\bin\$(PlatformName)\$(ConfigurationName)\Assembly-CSharp.dll" DestinationFiles="$(ProjectDir)Assembly-CSharp.dll" />
     <Copy SourceFiles="..\Output\PeerCC.ClientUnityXaml.Assembly-CSharp\WebRtc\bin\$(PlatformName)\$(ConfigurationName)\Assembly-CSharp.pdb" DestinationFiles="$(ProjectDir)Assembly-CSharp.pdb" Condition="Exists('..\Output\PeerCC.ClientUnityXaml.Assembly-CSharp\WebRtc\bin\$(PlatformName)\$(ConfigurationName)\Assembly-CSharp.pdb')" />
