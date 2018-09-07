@@ -33,7 +33,11 @@ namespace PeerConnectionClient.Utilities
         /// <param name="audioCodec">Audio codec.</param>
         /// <param name="videoCodec">Video codec.</param>
         /// <returns>True if succeeds to force to use the selected audio/video codecs.</returns>
+#if ORTCLIB
         public static bool SelectCodecs(ref string sdp, CodecInfo audioCodec, CodecInfo videoCodec)
+#else
+        public static bool SelectCodecs(ref string sdp, int audioCodecId, int videoCodecId)
+#endif
         {
             Regex mfdRegex = new Regex("\r\nm=audio.*RTP.*?( .\\d*)+\r\n");
             Match mfdMatch = mfdRegex.Match(sdp);
@@ -42,13 +46,10 @@ namespace PeerConnectionClient.Utilities
 #if ORTCLIB
             byte audioCodecId=audioCodec?.PreferredPayloadType ?? 0;
             byte videoCodecId=videoCodec?.PreferredPayloadType ?? 0;
-#else
-            int audioCodecId = audioCodec?.Id ?? 0;
-            int videoCodecId = videoCodec?.Id ?? 0;
 #endif
             if (audioMediaDescFound)
             {
-                if (audioCodec == null)
+                if (audioCodecId < 0)
                 {
                     return false;
                 }
@@ -70,7 +71,7 @@ namespace PeerConnectionClient.Utilities
             bool videoMediaDescFound = mfdMatch.Groups.Count > 1; //Group 0 is whole match
             if (videoMediaDescFound)
             {
-                if (videoCodec == null)
+                if (videoCodecId < 0)
                 {
                     return false;
                 }
